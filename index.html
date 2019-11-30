@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Game of Life</title>
+	
+	<!-- 	Bootstrap -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style type="text/css">
+		div{
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+	</style>
+</head>
+<body>
+	
+	<h2 align="center">Game of Life</h2>
+	
+	<br>
+		<div align="center" class="control_panel">
+			Fill Mode: 
+			<select name="mode">
+				<option value="manual">Manual</option>
+				<option value="auto">Auto</option>
+			</select>
+			ROWS  <input type="text" name="rows" id="rows" value="10" size="3">
+			COLS  <input type="text" name="cols" id="cols" value="10" size="3">
+			Resolution  <input type="text" name="resol" id="resol" value="20" size="3">
+		</div>
+		<div align="center">
+			<button class="btn btn-primary" id="startbutton">Start </button>
+		</div>
+		<div align="center">
+			<button class="btn btn-primary" type="reset" id="refreshbutton" onclick="location.reload();">Refresh </button>
+		</div>
+		<div align="center">
+			<span >Generation &nbsp;</span> <span id="gen"></span>
+		</div>
+		<div align="center" >
+			<canvas id="canvas" class="shadow-sm" style="border: 1px solid black;"></canvas>
+		</div>
+
+	<script src="index.js"></script>
+</body>
+</html>
