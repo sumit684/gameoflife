@@ -17,36 +17,42 @@
 			margin-top: 5px;
 			margin-bottom: 5px;
 		}
+		body{
+			background-image: url('back.jpg');
+			background-repeat: no-repeat;
+			background-size: 100%;
+			color: white;
+		}
 	</style>
 </head>
 <body>
 	
-	<h2 align="center">Game of Life</h2>
+	<div class="display-3" align="center">Game of Life</div>
 	
 	<br>
-		<div align="center" class="control_panel">
-			Fill Mode: 
-			<select name="mode">
-				<option value="manual">Manual</option>
-				<option value="auto">Auto</option>
-			</select>
-			ROWS  <input type="text" name="rows" id="rows" value="20" size="3">
-			COLS  <input type="text" name="cols" id="cols" value="20" size="3">
-			Resolution  <input type="text" name="resol" id="resol" value="20" size="3">
-		</div>
-		<div align="center">
-			<button class="btn btn-primary" id="startbutton">Start </button>
-		</div>
-		<div align="center">
-			<button class="btn btn-primary" type="reset" id="refreshbutton" onclick="location.reload();">Refresh </button>
-		</div>
-		<div align="center">
+	<div align="center" class="control_panel">
+		Fill Mode: 
+		<select name="mode">
+			<option value="manual">Manual</option>
+			<option value="auto">Auto</option>
+		</select>
+		ROWS  <input type="text" name="rows" id="rows" value="70" size="3">
+		COLS  <input type="text" name="cols" id="cols" value="250" size="3">
+		Resolution  <input type="text" name="resol" id="resol" value="6" size="3">
+	</div>
+	<div align="center">
+		<button class="btn btn-primary" id="startbutton">Start </button>
+	</div>
+	<div align="center">
+		<button class="btn btn-primary" type="reset" id="refreshbutton" onclick="location.reload();">Refresh </button>
+	</div>
+		<!-- <div align="center">
 			<span >Generation &nbsp;</span> <span id="gen"></span>
-		</div>
+		</div> -->
 		<div align="center" >
 			<canvas id="canvas" class="shadow-sm" style="border: 1px solid black;"></canvas>
 		</div>
 
-	<script src="index.js"></script>
-</body>
-</html>
+		<script src="index.js"></script>
+	</body>
+	</html>

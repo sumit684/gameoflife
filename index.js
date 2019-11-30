@@ -36,7 +36,7 @@ $('#startbutton').click(function(){
 
 
 function handleClick(e) {
-	ctx.fillStyle = "black";
+	ctx.fillStyle = "#0aa59e";
 	var x = Math.floor(e.offsetX / boxSize); // x index of grid box
 	var y =  Math.floor(e.offsetY / boxSize); // y index of grid box
 	grid[x][y]=1;//get grid box number
@@ -132,7 +132,7 @@ function render(grid) {
 
 			ctx.rect(x, y, boxSize, boxSize);
 
-			ctx.fillStyle = cell ? 'black' : 'white';
+			ctx.fillStyle = cell ? '#0aa59e' : 'white';
 			ctx.fill();
 			// ctx.stroke();
 		}
